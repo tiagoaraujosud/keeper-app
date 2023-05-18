@@ -1,9 +1,9 @@
 
 function Header() {
     return (
-      <div className="App">
+      <header>
         <h1>Keeper App</h1>
-      </div>
+      </header>
     );
   }
   

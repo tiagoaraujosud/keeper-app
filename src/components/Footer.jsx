@@ -5,9 +5,9 @@ function Footer() {
     const currentYear = date.getFullYear();
 
     return (
-      <div className="App">
-        <p>Copyright {currentYear}</p>
-      </div>
+      <footer>
+        <p>Copyright ⓒ {currentYear}</p>
+      </footer>
     );
   }
   
