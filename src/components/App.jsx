@@ -2,7 +2,6 @@ import Header from "./Header";
 import Note from "./Note";
 import Footer from "./Footer";
 import CreateNoteArea from "./CreateNoteArea";
-import notes from "../notes";
 import { useState } from "react";
 
 function App() {
@@ -11,6 +10,14 @@ function App() {
   function addNote(newNote) {
     setNotes(prevNotes => {
       return [...prevNotes, newNote];
+    });
+  }
+
+  function deleteNote(id) {
+    setNotes(prevNotes => {
+      return prevNotes.filter((note, index) => {
+        return index !== id;
+      });
     });
   }
 
@@ -25,6 +32,7 @@ function App() {
             key={index} 
             title={note.title} 
             content={note.content}
+            onDelete={deleteNote}
         />
         );
       })}
